@@ -1,7 +1,8 @@
 # A simple API to Create and Fetch Posts
 
-- API is Designed to handle multiple concurrent post requests. Data is written 
-in bulk rather than with every request. Time delay before writing data could be set in `WorkerService`, default time delay is set to 30 seconds.
+#### ⚠️You need to have `dotnet` (v6+) and `dotnet-ef` tool installed on your system to use this api.
+
+### API is Designed to handle multiple concurrent post requests. Data is written in bulk rather than with every request. Time delay before writing data could be set in `WorkerService`, default time delay is set to 30 seconds.
 
 ### API Endpoints
 - #### `/get-posts`
@@ -12,7 +13,9 @@ in bulk rather than with every request. Time delay before writing data could be 
 - ### `/create-post`
   - Requires a json payload in request body, for example: -
   ```
-    title: "MyPost"
-    content: "lorem-ipsum"
+    {
+      title: "MyPost"
+      content: "lorem-ipsum"
+    }
   ```
   - Returns Status-Code `201` with message `"post-created"` if post is created successfully
